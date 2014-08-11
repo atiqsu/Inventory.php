@@ -1,2 +1,1 @@
-Inventory.htm
-=============
+Inventory management and display.

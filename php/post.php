@@ -53,5 +53,3 @@
 
 // return to the blog index
 header('Location:..');
-
-?>

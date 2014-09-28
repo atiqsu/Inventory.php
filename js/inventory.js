@@ -27,10 +27,10 @@
 
         var while_count = item_count;
         do{
-            // load post into array
+            // load item into array
             item = items[item_count - while_count].split('<');
 
-            // display post
+            // display item
             document.getElementById('inventory').innerHTML += '<tr>'
               + '<td><b>' + item[1] + '</b>'
               + '<td>' + item[3].split('>>').join('<br>')

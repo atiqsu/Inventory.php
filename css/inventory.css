@@ -1,3 +1,9 @@
+body,
+input,
+textarea{
+    background: #000;
+    color: #aaa;
+}
 #inventory-form{
     margin-top: 10px;
 }
@@ -11,7 +17,7 @@
     text-align: right;
 }
 #inventory-labels{
-    background: #ccc;
+    background: #333;
 }
 table{
     border-collapse: collapse;

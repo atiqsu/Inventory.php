@@ -1,25 +1,25 @@
 <?php ?>
 <?php if(isset($_POST['submit-button'])){
 
-    // load settings
+    // Load settings.
     require 'settings.php';
 
-    // verify password
+    // Verify password.
     if($_POST['password'] != $secret_password){
         header('Location:../?incorrect_password');
         exit;
     }
 
-    // load the database file
+    // Load the database file.
     $db = fopen(
       $database_path,
       'a+'
     );
 
-    // lock the database file
+    // Lock the database file.
     if(flock($db, LOCK_EX)){
 
-        // write blog post at the end of the database file
+        // Insert item at the end of the database file.
         fwrite(
           $db,
           date('Y-m-d H:i:s')
@@ -40,16 +40,16 @@
           . "\n"
         );
 
-        // unlock the database file
+        // Unlock the database file.
         flock(
           $db,
           LOCK_UN
         );
 
-        // close the database file
+        // Close the database file.
         fclose($db);
     }
 }
 
-// return to the blog index
+// Return to the inventory index.
 header('Location:..');
